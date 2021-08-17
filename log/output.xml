@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 4.1 (Python 3.9.6 on darwin)" generated="20210817 12:44:44.011" rpa="false" schemaversion="2">
+<suite id="s1" name="Login Form" source="/Users/laylla.rodrigues/login/web/test/login_form.robot">
+<test id="s1-t1" name="Login sem sucesso">
+<kw name="Nova sessão" library="base" type="SETUP">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${url}</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20210817 12:44:44.307" level="INFO">Opening browser 'chrome' to base url 'https://www.youse.com.br/users/email_verifications/new'.</msg>
+<status status="PASS" starttime="20210817 12:44:44.307" endtime="20210817 12:44:54.588"/>
+</kw>
+<status status="PASS" starttime="20210817 12:44:44.306" endtime="20210817 12:44:54.589"/>
+</kw>
+<kw name="Go To" library="SeleniumLibrary">
+<arg>${url}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20210817 12:44:54.590" level="INFO">Opening url 'https://www.youse.com.br/users/email_verifications/new'</msg>
+<status status="PASS" starttime="20210817 12:44:54.590" endtime="20210817 12:44:56.022"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>css:input[name=email]</arg>
+<arg>laylla.rodrigues@youse.com.br</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20210817 12:44:56.023" level="INFO">Typing text 'laylla.rodrigues@youse.com.br' into text field 'css:input[name=email]'.</msg>
+<status status="PASS" starttime="20210817 12:44:56.022" endtime="20210817 12:44:56.809"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>css:input[name='commit']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20210817 12:44:56.810" level="INFO">Clicking element 'css:input[name='commit']'.</msg>
+<status status="PASS" starttime="20210817 12:44:56.809" endtime="20210817 12:44:58.694"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>css:input[name='user[password]']</arg>
+<arg>Youse123</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20210817 12:44:58.695" level="INFO">Typing text 'Youse123' into text field 'css:input[name='user[password]']'.</msg>
+<status status="PASS" starttime="20210817 12:44:58.694" endtime="20210817 12:44:58.832"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>css:input[name='commit']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20210817 12:44:58.832" level="INFO">Clicking element 'css:input[name='commit']'.</msg>
+<status status="PASS" starttime="20210817 12:44:58.832" endtime="20210817 12:45:00.552"/>
+</kw>
+<kw name="Current Frame Should Contain" library="SeleniumLibrary">
+<arg>Email ou senha inválidos.</arg>
+<doc>Verifies that the current frame contains ``text``.</doc>
+<msg timestamp="20210817 12:45:00.579" level="INFO">Current frame contains text 'Email ou senha inválidos.'.</msg>
+<status status="PASS" starttime="20210817 12:45:00.553" endtime="20210817 12:45:00.580"/>
+</kw>
+<kw name="Encerra sessão" library="base" type="TEARDOWN">
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20210817 12:45:00.581" endtime="20210817 12:45:00.802"/>
+</kw>
+<status status="PASS" starttime="20210817 12:45:00.580" endtime="20210817 12:45:00.803"/>
+</kw>
+<tag>login_error</tag>
+<status status="PASS" starttime="20210817 12:44:44.306" endtime="20210817 12:45:00.804"/>
+</test>
+<status status="PASS" starttime="20210817 12:44:44.013" endtime="20210817 12:45:00.814"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="1" fail="0" skip="0">login_error</stat>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="Login Form">Login Form</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
